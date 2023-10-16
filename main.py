@@ -34,7 +34,6 @@ if __name__ == "__main__":
         if keyboard.is_pressed("shift+tab"):
             break
         for key, input in MAPPINGS.items():
-            print(midi.GetKeyState(key))
             if midi.GetKeyState(key):
                 input.hold()
             else:
